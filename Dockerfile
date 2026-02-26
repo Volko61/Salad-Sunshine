@@ -1,5 +1,5 @@
-# Start with the official Steam-Headless image
-FROM josh5/steam-headless
+# Force the AMD64 platform so WSL doesn't get confused, and use the correct repo
+FROM --platform=linux/amd64 josh5/steam-headless:latest
 
 # Switch to root to install network tools
 USER root
